@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f7f2ff;
+    background: linear-gradient(180deg, #f7f2ff 0%, #aea6ff 80%);
+    background: -webkit-linear-gradient(180deg, #f7f2ff 0%, #aea6ff 80%);
+    background: -moz-linear-gradient(180deg, #f7f2ff 0%, #aea6ff 80%);
+    transition: 0.6s;
+}
+
+body.darkmode {
+    background: #8e55da;
+    background: linear-gradient(180deg, #8e55da 0%, #171455 80%);
+    background: -webkit-linear-gradient(180deg, #8e55da 0%, #171455 80%);
+    background: -moz-linear-gradient(180deg, #8e55da 0%, #171455 80%);
+    transition: 0.6s;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    margin-right: -290px;
+}
+
+.container-navbar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    background: #9a9af6;
+    background: linear-gradient(180deg, #9a9af6 0%, #231271 80%);
+    background: -webkit-linear-gradient(180deg, #9a9af6 0%, #231271 80%);
+    background: -moz-linear-gradient(180deg, #9a9af6 0%, #231271 80%);
+}
+
+
+.main-dark-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#text-dark {
+    text-align: right;
+    margin-right: 10px;
+    cursor: default;
+    animation: typing 3s steps(45) infinite reverse;
+}
+
+label {
+    margin-right: 100px;
+
+    width: 70px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+
+    position: relative;
+    cursor: pointer;
+
+    transition: 0.3s;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4)
+}
+
+label::after {
+    content: '';
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    background-color: rgb(156, 134, 207);
+    top: 2.5px;
+    left: 4px;
+    border-radius: 50%;
+    background: linear-gradient(to right, #fff700, #ff7b00);
+    transition: 0.5s;
+
+}
+
+input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+input:checked+label {
+    background-color: rgb(0, 0, 0);
+    transition: 0.3s;
+}
+
+input:checked+label::after {
+    left: 41px;
+    background: linear-gradient(to right, #4e54c8, #2b2b5c);
+    transition: 0.5s;
+}
+
+
+.dark-text {
+    width: 110px;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 20px;
+    color: white;
+}
+
+
+
+.stream,
+.film,
+.comic {
+    background-color: rgb(95, 26, 159);
+    color: white;
+    margin: 30px;
+    font-family: monospace;
+    font-weight: 400;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    transition: .3s;
+    box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.75);
+    -webkit-box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.75);
+    -moz-box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.75);
+    text-shadow: 3px 3px 8px rgba(255, 255, 255, 0.49);
+
+}
+
+
+.stream {
+    background: rgb(151, 112, 206);
+}
+
+a{
+    text-decoration: none;
+}
+
+.stream:hover,
+.film:hover,
+.comic:hover {
+    background-color: rgb(164, 124, 201);
+    color: black;
+    transition: 0.3s;
+    cursor: pointer;
+    transform: scale(1.1);
+    font-weight: bold;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.49);
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    align-items: center;
+    gap: 100px;
+    margin: 100px;
+}
+
+.img2-twitch,
+.img-youtube,
+.img4-tiktok,
+.img3-instagram {
+    width: 300px;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.youtube,
+.twitch,
+.instagram,
+.tiktok {
+    background-color: rgb(101, 40, 134);
+    border-radius: 20px;
+    display: flexbox;
+    align-items: center;
+    padding-bottom: 30px;
+    transition: 0.2s;
+    box-shadow: 0px 0px 21px 2px rgba(136, 136, 255, 0.75);
+    -webkit-box-shadow: 0px 0px 21px 2px rgba(136, 136, 255, 0.75);
+    -moz-box-shadow: 0px 0px 21px 2px rgba(136, 136, 255, 0.75);
+}
+
+body.darkmode .youtube,
+body.darkmode .twitch,
+body.darkmode .instagram,
+body.darkmode .tiktok {
+    background-color: rgb(124, 111, 199);
+}
+
+.content-text {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Orbitron', sans-serif;
+    font-style: italic;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    transition: 0.6s;
+}
+
+
+.content-desc {
+    font-size: 20px;
+    width: 300px;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    font-family: monospace;
+    color: white;
+    transition: 0.6s;
+}
+
+body.darkmode .content-desc ,
+body.darkmode .content-text {
+    color: rgb(21, 21, 28);
+    transition: 0.6s;
+}
+
+
+.youtube:hover,
+.twitch:hover,
+.instagram:hover,
+.tiktok:hover {
+    transform: scale(1.1);
+    transition: 0.4s;
+    background-color: rgb(143, 136, 215);
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 28px 4px rgba(136, 136, 255, 0.75);
+    -webkit-box-shadow: 0px 0px 28px 4px rgba(136, 136, 255, 0.75);
+    -moz-box-shadow: 0px 0px 28px 4px rgba(136, 136, 255, 0.75);
+}
